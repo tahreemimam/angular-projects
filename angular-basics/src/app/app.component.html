@@ -1,0 +1,68 @@
+<h2>Two Way Data Binding</h2>
+<input type="text" [(ngModel)]="CourseName">
+{{CourseName}}
+
+<!-- Structural Directive -->
+<h2>ngIf</h2>
+<h3 *ngIf="condition">Courses Available</h3>
+<h3 *ngIf="!condition">No Course Available</h3>
+
+<h2>ngFor</h2>
+<ul>
+  <li *ngFor="let tech of technologies">
+    {{tech}}
+  </li>
+</ul>
+
+<h3>ngSwitch</h3>
+<div [ngSwitch]="number">
+  <div *ngSwitchCase="'one'">The Number is {{number}}</div>
+  <div *ngSwitchCase="'two'">The Number is {{number}}</div>
+  <div *ngSwitchCase="'three'">The Number is {{number}}</div>
+  <div *ngSwitchDefault="'two'">This is default Number</div>
+</div>
+
+<!-- Attribute Directive -->
+<h3>ngStyle</h3>
+<div [ngStyle]="{'color':'blue'}">Color Change</div>
+<div [ngStyle]="{'color':colValue, 'background-color':bgColor}">Color Change</div>
+
+<h3>ngClass</h3>
+<div [ngClass]="'abc'">
+  class color property
+  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut numquam eos dignissimos reiciendis vel. Quaerat voluptatum illo harum voluptates delectus.
+</div>
+
+<div [ngClass]="className">
+  class color property
+  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut numquam eos dignissimos reiciendis vel. Quaerat voluptatum illo harum voluptates delectus.
+</div>
+
+<!-- Pipe -->
+<h3>Pipes</h3>
+{{technologyName}} <br>
+Uppercase: {{technologyName | uppercase}} <br>
+Lowercase: {{technologyName | lowercase}} <br>
+Titlecase: {{technologyName | titlecase}} <br>
+Percent: {{kcValue | percent}} <br>
+Currency: {{price | currency}} <br>
+Date: {{dateVal | date}} <br>
+
+<!-- Parameterizing Pipe -->
+Currency: {{price | currency:'INR'}} <br>
+Currency: {{price | currency:'GBP'}} <br>
+Currency: {{price | currency:'Rs'}} <br>
+Date: {{dateVal | date:'MM-dd-YYYY'}} <br>
+Date: {{dateVal | date:'short'}} <br>
+Date: {{dateVal | date:'long'}} <br>
+
+<!-- Chaining Pipes -->
+<h3>Chaining Pipes</h3> <br>
+Date: {{dateVal | date | uppercase}} <br>
+
+<h3>Number</h3><br>
+{{8.06 | number:'2.3-4'}} <br>
+
+<input type="text" [(ngModel)]="someval"><br>
+{{someval}} <br>
+{{someval | uppercase}}
