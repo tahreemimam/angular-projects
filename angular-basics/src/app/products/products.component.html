@@ -1,0 +1,15 @@
+<h2>Products</h2>
+<table>
+    <th>Product Id</th>
+    <th>Product Name</th>
+    <th>Product Description</th>
+    <th>Product Price</th>
+    <tr *ngFor="let prod of productList">
+        <td>{{prod.prodId}}</td>
+        <td>{{prod.prodName}}</td>
+        <td>{{prod.prodDesc}}</td>
+        <td>{{prod.prodPrice}}</td>
+        <td><a [routerLink]="['/edit',prod.prodId]">Edit</a></td>
+        <td><a [routerLink]="['delete',prod.prodId]">Delete</a></td>
+    </tr>
+</table>
