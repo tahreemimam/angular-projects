@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { BasicConceptsComponent } from './basic-concepts/basic-concepts.component';
 import { ProductsComponent } from './products/products.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 const routes: Routes = [
   {
@@ -16,6 +18,14 @@ const routes: Routes = [
   {
     path:'products',
     component: ProductsComponent
+  },
+  {
+    path:'template-form',
+    component: TemplateDrivenFormComponent
+  },
+  {
+    path:'reactive-form',
+    component: ReactiveFormComponent
   }
 ];
 
